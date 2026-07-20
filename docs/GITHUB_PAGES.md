@@ -2,7 +2,9 @@
 
 ## 当前状态
 
-V0.1.0 只完成本地开发与检查。尚未创建远程仓库、尚未推送、尚未启用 GitHub Pages。
+V0.1.0 已发布至公开仓库 `sunjian234/ai-training-preview`，GitHub Pages 发布源为 `main` 分支根目录。
+
+在线预览：<https://sunjian234.github.io/ai-training-preview/>
 
 ## 推送前强制确认点
 

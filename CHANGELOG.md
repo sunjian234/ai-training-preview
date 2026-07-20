@@ -21,9 +21,10 @@
 - 区分学校培训合格证明、项目实训能力证明和国家职业技能衔接方向。
 - Hermes 仅作概念性功能介绍，不包含内部资料。
 
-### 尚未执行
+### 发布
 
-- 未创建 GitHub 远程仓库。
-- 未推送任何代码。
-- 未启用 GitHub Pages。
-- 未购买或申请域名。
+- 已创建公开仓库 `sunjian234/ai-training-preview`。
+- 已将 `main` 分支推送至 GitHub。
+- 已启用 GitHub Pages，发布源为 `main` 分支根目录。
+- 预览地址：<https://sunjian234.github.io/ai-training-preview/>。
+- 未购买或申请域名，未产生费用。

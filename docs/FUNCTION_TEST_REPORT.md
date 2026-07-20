@@ -45,12 +45,12 @@
 - 返回顶部按钮跳转至页面顶部。
 - 所有按钮和链接具备悬停、键盘焦点和按下视觉状态。
 
-## 发布后补充测试
+## GitHub Pages 发布检查
 
-GitHub Pages 部署后需重新检查：
+- HTTPS 已启用。
+- GitHub Pages 发布源为 `main` 分支根目录。
+- 网站首页、CSS 和 JavaScript 使用适配仓库子路径的相对地址。
+- 页面源码使用 UTF-8，并保留简体中文内容。
+- 表单仍无提交目标，不调用网络接口或浏览器持久化存储。
 
-1. HTTPS 访问。
-2. GitHub Pages 子路径下 CSS 和 JavaScript 相对路径加载。
-3. Chrome、Edge、Safari、Firefox 最新稳定版。
-4. 真实手机的菜单、表单软键盘与滚动。
-5. 仓库 Pages 设置和缓存更新。
+正式对外推广前，仍建议在 Chrome、Edge、Safari、Firefox 最新稳定版及真实手机上复核菜单、软键盘和长页面滚动体验。
