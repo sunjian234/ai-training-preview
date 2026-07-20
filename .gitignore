@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+.env
+.env.*
+node_modules/
+temp/
+tmp/
+*.pdf
+*.key
+*.pem
+secrets/
+credentials/
