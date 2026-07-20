@@ -348,7 +348,8 @@ img { max-width: 100%; }
   .brand-mark { width: 38px; height: 38px; }.brand-copy strong { font-size: 14px; }.brand-copy small { font-size: 9px; }
   .hero { padding-top: 38px; }.hero h1 { font-size: clamp(37px,12vw,49px); }.hero-lead { font-size: 15px; }.eyebrow { font-size: 10px; }
   .hero-actions { display: grid; grid-template-columns: 1fr; }.button { width: 100%; }.button-text { min-height: 42px; }
-  .capability-list { gap: 6px; }.capability-list li { font-size: 10px; }
+  .capability-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 6px; }
+  .capability-list li { min-width: 0; font-size: 10px; text-align: center; }
   .hero-panel { padding: 18px; border-radius: 18px; }.loop-visual { grid-template-columns: 1fr; }.loop-core { min-height: 220px; }.loop-steps li { min-height: 50px; }.hero-foot { justify-content: flex-start; margin-top: 48px; }.hero-foot span { flex-basis: 100%; }
   .section { padding: 68px 0; }.section-heading h2, .platform-copy h2, .contact-copy h2, .pilot-main h2 { font-size: 30px; }
   .insight-grid, .value-grid, .project-grid { grid-template-columns: 1fr; }.insight-card { min-height: 250px; }
