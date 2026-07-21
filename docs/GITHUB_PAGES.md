@@ -1,87 +1,45 @@
 # GitHub Pages 部署说明
 
-## 当前状态
+## 当前配置
 
-V0.1.0 已发布至公开仓库 `sunjian234/ai-training-preview`，GitHub Pages 发布源为 `main` 分支根目录。
+- 仓库：`sunjian234/ai-training-preview`
+- 仓库状态：公开
+- 发布分支：`main`
+- 发布目录：`/(root)`
+- 预览地址：<https://sunjian234.github.io/ai-training-preview/>
 
-在线预览：<https://sunjian234.github.io/ai-training-preview/>
+V0.2.0 为无需构建的静态多页面网站。首页、八个内页和公共资源均使用相对路径，支持 GitHub Pages 的仓库子目录地址。
 
-## 推送前强制确认点
+## 发布命令
 
-执行任何 GitHub 远程操作前，必须向用户展示并获得明确确认：
-
-1. GitHub 当前登录用户名。
-2. 拟创建仓库名称。
-3. 仓库公开状态（规划为 Public）。
-4. 预计 GitHub Pages 地址。
-5. 待上传文件列表。
-6. 敏感信息检查结果。
-7. 是否确认继续创建、推送和启用 Pages。
-
-如果账号、权限、仓库状态或登录身份异常，应立即停止。
-
-## 仓库名称规则
-
-首选：
-
-```text
-ai-training-preview
-```
-
-如果已存在：
-
-```text
-ai-training-preview-v1
-```
-
-## 预计访问地址
-
-首选仓库对应：
-
-```text
-https://<GitHub用户名>.github.io/ai-training-preview/
-```
-
-备用仓库对应：
-
-```text
-https://<GitHub用户名>.github.io/ai-training-preview-v1/
-```
-
-## 用户确认后的命令参考
-
-以下命令只作部署说明，**当前版本未执行**。需先安装并登录 GitHub CLI，确认用户身份后才能使用。
+在项目目录完成检查后执行：
 
 ```powershell
-git init
-git branch -M main
 git add .
-git commit -m "release: V0.1.0 principal preview"
-gh auth status
-gh repo create ai-training-preview --public --source . --remote origin --push
+git commit -m "Upgrade website to V0.2.0 multi-page content architecture"
+git push origin main
 ```
 
-如果仓库名已存在，应先确认改用 `ai-training-preview-v1`，不得擅自覆盖已有仓库。
+只允许向当前项目的 `origin/main` 推送；不得删除、覆盖或访问其他仓库。
 
-## 启用 GitHub Pages
+## Pages 设置
 
-可在仓库网页中操作：
+如需在网页复核：
 
-1. 打开仓库 **Settings**。
-2. 选择 **Pages**。
-3. 在 **Build and deployment** 中选择 `Deploy from a branch`。
-4. Branch 选择 `main`，目录选择 `/(root)`。
-5. 保存并等待发布。
-6. 通过 GitHub 显示的地址访问，确认 HTTPS 可用。
-
-也可在确认后使用 GitHub API 或 CLI 配置，但必须先核验账号与仓库。
+1. 打开仓库 **Settings → Pages**。
+2. Source 选择 `Deploy from a branch`。
+3. Branch 选择 `main`，Folder 选择 `/(root)`。
+4. 保存并等待构建完成。
 
 ## 部署后验收
 
-- 首页返回 HTTP 200，标题和首屏正常显示。
-- 页面通过 HTTPS 访问，不出现混合内容警告。
-- 顶部导航全部可跳转。
-- 手机宽度下菜单可展开、关闭，内容无横向溢出。
-- 表单不会发出提交请求。
-- 页面底部显示 `V0.1.0 校长预览版`。
-- 仓库中不存在密钥、隐私文件、原始学校方案 PDF 或 Hermes 内部文件。
+- 根路径和八个一级页面均返回 HTTP 200。
+- `assets/css/style.css` 与 `assets/js/main.js` 可加载。
+- 页面通过 HTTPS 访问，中文显示正常。
+- PC 下拉导航和手机折叠菜单可用，无横向溢出。
+- 所有相对链接适配 `/ai-training-preview/` 子目录。
+- 表单不发送网络请求或写入浏览器存储。
+- 页脚显示 `V0.2.0 多页面内容版`。
+- 仓库不包含密钥、隐私文件、PDF 或内部平台资料。
+
+部署不需要购买域名、不需要付费服务，也不需要在项目中保存 GitHub 凭据。
